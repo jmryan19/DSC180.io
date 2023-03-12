@@ -75,6 +75,6 @@ Mix of word explanation of results with tables, graphs, images, code, and salien
 
 |  | UCSD-Trained Full | MIMIC-Trained Full | UCSD-Trained Segmented| MIMIC-Trained Segmented ||
 | :---        |    :---:     | :---:  | :--: |  :--: | :--: |
-| AUROC |0.755 | 0.877 | 0.754 | 0.889 |
-| PRC | 0.590 | 0.799 | 0.559 | 0.816 |
-| Accuracy | 0.652 | 0.793 | 0.616 | 0.802 |
+| **AUROC** |0.755 | 0.877 | 0.754 | 0.889 |
+| **PRC** | 0.590 | 0.799 | 0.559 | 0.816 |
+| **Accuracy** | 0.652 | 0.793 | 0.616 | 0.802 |
