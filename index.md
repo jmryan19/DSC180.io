@@ -1,8 +1,7 @@
-# Performance of Biomarkers for CNN Training: A Comparison of Results
-
 ### Jake Ryan
 
 ## Background
+
 
 An explanation of DL for medical imaging (linked with resources), and the state of training data.
 
@@ -22,6 +21,9 @@ List the two hypotheses being put to the test
 
 ## The Data 
 
+### UCSD Data
+
+### MIMIC Data
 Breakdown of Hsiao Data and MIMIC data
 
 ## The Models
@@ -37,6 +39,8 @@ The ResNet 152v2 is an image classification model built by Microsoft that is ren
 
 ImageNet is an industry standard dataset often used to benchmark classification model performance. Models trained to perform on ImageNet have developed a feature space that is adept at predicting many different classes of things that may be in the image. It is a great 'starting place' for models trained on niche tasks, like this one.
 </details> 
+
+
 
 ## Biomarkers Work (or Biomarkers Do Not Work (Yet))
 
