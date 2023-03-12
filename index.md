@@ -56,7 +56,7 @@ Using a segmentated image can help focus a classification model on the important
 
 1.  Deep learning models trained to infer the presence of pulmonary edema from chest XRays and BNPP levels (UCSD Data) rather than radiologist diagnoses will generalize to unseen data with radiologist diagnoses provided by MIMIC-CXR.
 
-2. A deep learning algorithm that emphasizes anatomic structures will perform better than one that is not informed. This will be evaluated by training two algorithms, one provided and tested on lung-and-heart segmentations as additional input channels and one without.
+2. A deep learning model that emphasizes anatomic structures will perform better than one that is not informed. This will be evaluated by training two models for each dataset, two provided and tested on lung-and-heart segmentations as additional input channels and two without.
 
 
 
