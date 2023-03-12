@@ -6,7 +6,7 @@ This website aims to explain the project of its namesake. It involves deep learn
 
 ## Why Deep Learning for Medical Imaging?
 
-Medical imaging is costly and can take a lot of time to get results, as a specialist must analyze each image to determine what, if anything, is present. Because of this, there has been massive strides to bring deep learning to medical imaging. [Massive amounts of progress](https://www.thelancet.com/journals/landig/article/PIIS2589-7500(20)30160-6/fulltext) has been made, and there are many models that have fantastic levels of accuracy for determining what is present in a medical image.
+Medical imaging is costly and can take a lot of time to get results, as a specialist must analyze each image to determine what, if anything, is present. Because of this, there has been large strides to bring deep learning to medical imaging. [Massive amounts of progress](https://www.thelancet.com/journals/landig/article/PIIS2589-7500(20)30160-6/fulltext) has been made, and there are many models that have fantastic levels of accuracy for determining what is present in a medical image.
 
 Unfortunately, in order to train these models in the first place, researchers need access to thousand if not millions of high resolution medical images with their proper specialist given labels. The process of collecting a dataset like that is, of course, costly and time consuming (a cyclical issue).
 
@@ -14,25 +14,27 @@ Unfortunately, in order to train these models in the first place, researchers ne
 
 This paper was written by members of Augmented imaging/Artificial intelligence Data Analytics (AiDA) Lab, headed by Dr. Albert Hsiao. The findings are significant: models trained on chest radiographs to predict NT-proBNP (BNPP), a protein found in a blood serum test, levels performed very well. What does this mean? Well, BNPP levels are [highly correlated with pulmonary edema](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3106101/), so much so that the levels of the protein found in the blood test are a biomarker of the condition. So, just by looking at XRays, where the pulmonary edema is either present or not, models were able to effectively predict BNPP levels. This then begs the question "Can models trained to infer BNPP levels accurately predict the presence of pulmonary edema?"
 
+reexplain this section starting so just by looking at
+
 ### Why Does It Matter If This Model Works?
 
-A model that is trained on biomarker levels from chest XRays that can generalize to the predict the presence of the actual condition means that it meant not be necessary to acquire specialist labeled data. This would decrease the cost and time of acquiring large enough datasets for future experiments.
+If a model trained solely to infer the presence of pulmonary edema from chest XRays by utilizing a threshold of BNPP value and could generalize to perform well on radiologist confirmed pulmonary edema XRays, there would be less of a need to have radiologist confirmed XRays in the first place. This utilization of biomarkers for the training process here (if successful) could set the stage for other medical imaging models to do the same. Moving towards biomarkers for ground truth levels would decrease the cost and time of acquiring large enough datasets for future experiments.
 
 ## The Experiments
 
 ### The Data
 
 #### UCSD Data
-'UCSD' Data is set of about 16,000 chest radiographs. Rather than having radiologist confirmed for whether the XRay contains pulmonary edema, the dataset (from Justin's paper) contains only BNPP values. If the BNPP values is over 400, the XRay is labeled as if it did contain pulmonary edema. Otherwise, it is labeled as if it did not.
+'UCSD' Data is set of about 16,000 chest radiographs. Rather than having radiologist confirmed for whether the XRay contains pulmonary edema, the dataset (from AiDA Lab's paper) contains only BNPP values. If the BNPP values is over a threshold of 400 pg/mL, the XRay was labeled as if it did contain pulmonary edema. Otherwise, it was labeled as if it did not.
 
 <details>
 	<summary>UCSD Data Statistics</summary>
 
-	The STATS. The dataset is then split into train and validation sets with splits equal to 80% and 20%, respectively.
+	The threshold of 400 pg/mL was recommended by AiDA labs. The STATS. The dataset is then split into train and validation sets with splits equal to 80% and 20%, respectively.
 </details>
 
 #### MIMIC Data
-'MIMIC' Data comes from MIT's MIMIC-CXR public dataset, a project to provide anonymized chest radiographs and their respective medical results to the deep learning/medical imaging community. From this set, about 22,000 images were downloaded. A portion of the MIMIC set is witheld and used as the test set all models are evaluated on.
+'MIMIC' Data comes from MIT's MIMIC-CXR public dataset, a project to provide anonymized chest radiographs and their respective medical results to the deep learning/medical imaging community. From this set, about 22,000 images were utilized. A portion of the MIMIC set is witheld and used as the test set all models were evaluated on.
 
 <details>
 	<summary>MIMIC Data Statistics</summary>
@@ -48,17 +50,11 @@ There's an entire class of deep learning models called segmentation models. They
 <figcaption><a href="https://support.apple.com/en-us/HT213459">Example of Image Segmentation Used By Apple</a></figcaption>
 </figure>
 
-Using a segmentation model to 
+Using a segmentated image can help focus a classification model on the important aspects of the image by reducing the noise the model has to look at. Fortunately, AiDA Labs provided their anataomical segmentation model. All images are run through this model, providing an individual image of just the heart and an individual image of just the lungs. Using these focused images could improve model proficiency.
 
-Fortunately, AiDA Labs provided this work with their anataomical segmentation model. All images are run through this model, providing an individual image of the heart and an individual image of the lungs
+### The Hypotheses
 
-### The Idea Behind The Work
-
-Explain the basis of how past paper leads to hypotheses of new work.
-
-#### The Hypotheses
-
-1.  Deep learning algorithms trained to infer the presence of pulmonary edema from chest radiographs and BNPP levels rather than radiologist diagnoses will generalize to unseen data with radiologist diagnoses provided by MIMIC-CXR
+1.  Deep learning models trained to infer the presence of pulmonary edema from chest XRays and BNPP levels (UCSD Data) rather than radiologist diagnoses will generalize to unseen data with radiologist diagnoses provided by MIMIC-CXR.
 
 2. A deep learning algorithm that emphasizes anatomic structures will perform better than one that is not informed. This will be evaluated by training two algorithms, one provided and tested on lung-and-heart segmentations as additional input channels and one without.
 
