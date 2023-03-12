@@ -16,7 +16,39 @@ This paper was written by members of Augmented imaging/Artificial intelligence D
 
 ### Why Does It Matter If This Model Works?
 
+A model that is trained on biomarker levels from chest XRays that can generalize to the predict the presence of the actual condition means that it meant not be necessary to acquire specialist labeled data. This would decrease the cost and time of acquiring large enough datasets for future experiments.
 
+## The Experiments
+
+### The Data
+
+#### UCSD Data
+'UCSD' Data is set of about 16,000 chest radiographs. Rather than having radiologist confirmed for whether the XRay contains pulmonary edema, the dataset (from Justin's paper) contains only BNPP values. If the BNPP values is over 400, the XRay is labeled as if it did contain pulmonary edema. Otherwise, it is labeled as if it did not.
+
+<details>
+	<summary>UCSD Data Statistics</summary>
+
+	The STATS. The dataset is then split into train and validation sets with splits equal to 80% and 20%, respectively.
+</details>
+
+#### MIMIC Data
+'MIMIC' Data comes from MIT's MIMIC-CXR public dataset, a project to provide anonymized chest radiographs and their respective medical results to the deep learning/medical imaging community. From this set, about 22,000 images were downloaded. A portion of the MIMIC set is witheld and used as the test set all models are evaluated on.
+
+<details>
+	<summary>MIMIC Data Statistics</summary>
+
+	The STATS. The dataset is then split into train, validation, and test sets with splits equal to 80%, 10%, and 10%, respectively.
+</details>
+
+### Anatomical Segmentation
+There's an entire class of deep learning models called segmentation models. They are used to segment out a portion of the image. These are already incredibly popular; Apple photos uses it as part of the image cutout feature.
+
+![[Alt](https://support.apple.com/library/content/dam/edam/applecare/images/en_US/iOS/ios-16-iphone-13-pro-photos-cut-out-copy-share.png "Example of Image Segmentation Used By Apple")](https://support.apple.com/en-us/HT213459)
+
+
+Using a segmentation model to 
+
+Fortunately, AiDA Labs provided this work with their anataomical segmentation model. All images are run through this model, providing an individual image of the heart and an individual image of the lungs
 
 ### The Idea Behind The Work
 
@@ -28,30 +60,7 @@ Explain the basis of how past paper leads to hypotheses of new work.
 
 2. A deep learning algorithm that emphasizes anatomic structures will perform better than one that is not informed. This will be evaluated by training two algorithms, one provided and tested on lung-and-heart segmentations as additional input channels and one without.
 
-## The Data 
 
-### UCSD Data
-'UCSD' Data is set of about 16,000 chest radiographs. Rather than having radiologist confirmed for whether the XRay contains pulmonary edema, the dataset (from Justin's paper) contains only BNPP values. If the BNPP values is over 400, the XRay is labeled as if it did contain pulmonary edema. Otherwise, it is labeled as if it did not.
-
-<details>
-	<summary>UCSD Data Statistics</summary>
-
-	The STATS. The dataset is then split into train and validation sets with splits equal to 80% and 20%, respectively.
-</details>
-
-### MIMIC Data
-'MIMIC' Data comes from MIT's MIMIC-CXR public dataset, a project to provide anonymized chest radiographs and their respective medical results to the deep learning/medical imaging community. From this set, about 22,000 images were downloaded. A portion of the MIMIC set is witheld and used as the test set all models are evaluated on.
-
-<details>
-	<summary>MIMIC Data Statistics</summary>
-
-	The STATS. The dataset is then split into train, validation, and test sets with splits equal to 80%, 10%, and 10%, respectively.
-</details>
-
-### Anatomical Segmentation
-There's an entire class of deep learning models called segmentation models. They are used to segment out a portion of the image. These are already incredibly popular; Apple photos uses it as part of the [image cutout feature](https://support.apple.com/en-us/HT213459).
-
-Fortunately, AiDA Labs provided this work with their anataomical segmentation model. All images are run through this model, providing an individual image of the heart and an individual image of the lungs
 
 ## The Models
 
