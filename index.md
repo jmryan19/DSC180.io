@@ -46,8 +46,7 @@ There's an entire class of deep learning models called segmentation models. They
 <figure>
 <img src="https://support.apple.com/library/content/dam/edam/applecare/images/en_US/iOS/ios-16-iphone-13-pro-photos-cut-out-copy-share.png"  width="30%" height="40%" class="center">
 <figcaption><a href="https://support.apple.com/en-us/HT213459">Example of Image Segmentation Used By Apple</a></figcaption>
-<figure>
-
+</figure>
 
 Using a segmentation model to 
 
