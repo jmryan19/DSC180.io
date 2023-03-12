@@ -23,7 +23,9 @@ Explain the basis of how past paper leads to hypotheses of new work.
 
 #### The Hypotheses
 
-List the two hypotheses being put to the test
+1.  Deep learning algorithms trained to infer the presence of pulmonary edema from chest radiographs and BNPP levels rather than radiologist diagnoses will generalize to unseen data with radiologist diagnoses provided by MIMIC-CXR
+
+2. A deep learning algorithm that emphasizes anatomic structures will perform better than one that is not informed. This will be evaluated by training two algorithms, one provided and tested on lung-and-heart segmentations as additional input channels and one without.
 
 ## The Data 
 
@@ -48,7 +50,7 @@ List the two hypotheses being put to the test
 ### Anatomical Segmentation
 There's an entire class of deep learning models called segmentation models. They are used to segment out a portion of the image. These are already incredibly popular; Apple photos uses it as part of the [image cutout feature](https://support.apple.com/en-us/HT213459).
 
-
+Fortunately, AiDA Labs provided this work with their anataomical segmentation model. All images are run through this model, providing an individual image of the heart and an individual image of the lungs
 
 ## The Models
 
