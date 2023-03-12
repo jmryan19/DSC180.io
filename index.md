@@ -6,10 +6,9 @@ This website aims to explain the project of its namesake. It involves deep learn
 
 ## Why Deep Learning for Medical Imaging?
 
-Medical imaging is costly and can take a lot of time to get results, as a specialist must analyze each image to determine what, if anything, is present. Because of this, there has been massive strides to bring deep learning to medical imaging. Massive amounts of progress has been made, and there are many models that have fantastic levels of accuracy for determining what is present in a medical image.
+Medical imaging is costly and can take a lot of time to get results, as a specialist must analyze each image to determine what, if anything, is present. Because of this, there has been massive strides to bring deep learning to medical imaging. [Massive amounts of progress](https://www.thelancet.com/journals/landig/article/PIIS2589-7500(20)30160-6/fulltext) has been made, and there are many models that have fantastic levels of accuracy for determining what is present in a medical image.
 
-Unfortunately, in order to train these models in the first place, researchers need access to thousand if not millions of high resolution medical images with their proper specialist given labels. The process of collecting a dataset like that is, of course, costly and time consuming (tha)
-An explanation of DL for medical imaging (linked with resources), and the state of training data.
+Unfortunately, in order to train these models in the first place, researchers need access to thousand if not millions of high resolution medical images with their proper specialist given labels. The process of collecting a dataset like that is, of course, costly and time consuming (a cyclical issue).
 
 ## Introduction
 
@@ -78,3 +77,5 @@ Mix of word explanation of results with tables, graphs, images, code, and salien
 | **AUROC** |0.755 | 0.877 | 0.754 | 0.889 |
 | **PRC** | 0.590 | 0.799 | 0.559 | 0.816 |
 | **Accuracy** | 0.652 | 0.793 | 0.616 | 0.802 |
+
+
