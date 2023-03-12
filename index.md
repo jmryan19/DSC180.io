@@ -45,6 +45,11 @@ List the two hypotheses being put to the test
 	The STATS. The dataset is then split into train, validation, and test sets with splits equal to 80%, 10%, and 10%, respectively.
 </details>
 
+### Anatomical Segmentation
+There's an entire class of deep learning models called segmentation models. They are used to segment out a portion of the image. These are already incredibly popular; Apple photos uses it as part of the [image cutout feature](https://support.apple.com/en-us/HT213459).
+
+
+
 ## The Models
 
 There are four models: a model trained with full images and biomarker-based labels (UCSD Full), a model trained with full images and radiologist confirmed labels (MIMIC Full), a model trained with anatomically segmented images and biomarker-based labels (UCSD Segmented), and a model trained with anatomically segmented images and radiologist confirmed labels (MIMIC Segmented).
