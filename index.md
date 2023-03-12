@@ -89,7 +89,7 @@ Mix of word explanation of results with tables, graphs, images, code, and salien
 | **PRC** | 0.590 | 0.799 | 0.559 | 0.816 |
 | **Accuracy** | 0.652 | 0.793 | 0.616 | 0.802 |
 
-![Alt](images/all_auc.png)
+![Alt](images/all_roc.png)
 
 ![Alt](images/all_prc.png)
 
