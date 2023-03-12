@@ -10,11 +10,13 @@ Medical imaging is costly and can take a lot of time to get results, as a specia
 
 Unfortunately, in order to train these models in the first place, researchers need access to thousand if not millions of high resolution medical images with their proper specialist given labels. The process of collecting a dataset like that is, of course, costly and time consuming (a cyclical issue).
 
-## Introduction
-
 ### An Brief Explanation of the Paper "Deep Learning Radiographic Assessment of Pulmonary Edema: Optimizing Clinical Performance, Training With Serum Biomarkers"
 
-Explaining the basis of this paper (quiet briefly), giving audience an understanding into the biological science behing the ML.
+This paper was written by members of Augmented imaging/Artificial intelligence Data Analytics (AiDA) Lab, headed by Dr. Albert Hsiao. The findings are significant: models trained on chest radiographs to predict NT-proBNP (BNPP), a protein found in a blood serum test, levels performed very well. What does this mean? Well, BNPP levels are [highly correlated with pulmonary edema](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3106101/), so much so that the levels of the protein found in the blood test are a biomarker of the condition. So, just by looking at XRays, where the pulmonary edema is either present or not, models were able to effectively predict BNPP levels. This then begs the question "Can models trained to infer BNPP levels accurately predict the presence of pulmonary edema?"
+
+### Why Does It Matter If This Model Works?
+
+
 
 ### The Idea Behind The Work
 
