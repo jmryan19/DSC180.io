@@ -52,6 +52,8 @@ There's an entire class of deep learning models called segmentation models. They
 
 Using a segmentated image can help focus a classification model on the important aspects of the image by reducing the noise the model has to look at. Fortunately, AiDA Labs provided their anataomical segmentation model. All images are run through this model, providing an individual image of just the heart and an individual image of just the lungs. Using these focused images could improve model proficiency.
 
+![Alt](images/Segmentation.png)
+
 ### The Hypotheses
 
 1.  Deep learning models trained to infer the presence of pulmonary edema from chest XRays and BNPP levels (UCSD Data) rather than radiologist diagnoses will generalize to unseen data with radiologist diagnoses provided by MIMIC-CXR.
