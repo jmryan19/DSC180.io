@@ -28,9 +28,22 @@ List the two hypotheses being put to the test
 ## The Data 
 
 ### UCSD Data
+'UCSD' Data is set of about 16,000 chest radiographs. Rather than having radiologist confirmed for whether the XRay contains pulmonary edema, the dataset (from Justin's paper) contains only BNPP values. If the BNPP values is over 400, the XRay is labeled as if it did contain pulmonary edema. Otherwise, it is labeled as if it did not.
+
+<details>
+	<summary>UCSD Data Statistics</summary>
+
+	The STATS. The dataset is then split into train and validation sets with splits equal to 80% and 20%, respectively.
+</details>
 
 ### MIMIC Data
-Breakdown of Hsiao Data and MIMIC data
+'MIMIC' Data comes from MIT's MIMIC-CXR public dataset, a project to provide anonymized chest radiographs and their respective medical results to the deep learning/medical imaging community. From this set, about 22,000 images were downloaded. A portion of the MIMIC set is witheld and used as the test set all models are evaluated on.
+
+<details>
+	<summary>MIMIC Data Statistics</summary>
+
+	The STATS. The dataset is then split into train, validation, and test sets with splits equal to 80%, 10%, and 10%, respectively.
+</details>
 
 ## The Models
 
