@@ -43,9 +43,10 @@ A model that is trained on biomarker levels from chest XRays that can generalize
 ### Anatomical Segmentation
 There's an entire class of deep learning models called segmentation models. They are used to segment out a portion of the image. These are already incredibly popular; Apple photos uses it as part of the image cutout feature.
 
+<figure>
 <img src="https://support.apple.com/library/content/dam/edam/applecare/images/en_US/iOS/ios-16-iphone-13-pro-photos-cut-out-copy-share.png"  width="20%" height="20%">
-
-[![Alt](https://support.apple.com/library/content/dam/edam/applecare/images/en_US/iOS/ios-16-iphone-13-pro-photos-cut-out-copy-share.png "Example of Image Segmentation Used By Apple")](https://support.apple.com/en-us/HT213459)
+<figcaption><a href="https://support.apple.com/en-us/HT213459">Example of Image Segmentation Used By Apple</a></figcaption>
+<figure>
 
 
 Using a segmentation model to 
