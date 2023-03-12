@@ -1,8 +1,14 @@
 ### Jake Ryan
 
-## Background
+## What is this?
 
+This website aims to explain the project of its namesake. It involves deep learning (a form of machine learning commonly referred to as Artificial Intelligence) for the purpose of predicting whether chest radiographs (X-Rays) contain [pulmonary edema](https://www.mayoclinic.org/diseases-conditions/pulmonary-edema/symptoms-causes/syc-20377009). This site expects readers to have a basic familiriaty of what deep learning is and will explain the work with this idea in mind. However, any confusing terminology of this site can quickly be explained by a quick google search.
 
+## Why Deep Learning for Medical Imaging?
+
+Medical imaging is costly and can take a lot of time to get results, as a specialist must analyze each image to determine what, if anything, is present. Because of this, there has been massive strides to bring deep learning to medical imaging. Massive amounts of progress has been made, and there are many models that have fantastic levels of accuracy for determining what is present in a medical image.
+
+Unfortunately, in order to train these models in the first place, researchers need access to thousand if not millions of high resolution medical images with their proper specialist given labels. The process of collecting a dataset like that is, of course, costly and time consuming (tha)
 An explanation of DL for medical imaging (linked with resources), and the state of training data.
 
 ## Introduction
@@ -35,7 +41,8 @@ Each model is based on a ResNet 152v2 with pretrained weights from the ImageNet 
 <summary>What is ResNet 152v2 and what is ImageNet?</summary>
 <br>
 
-The ResNet 152v2 is an image classification model built by Microsoft that is renowned for its use of [residual connections](https://towardsdatascience.com/what-is-residual-connection-efb07cab0d55), a technique that allows networks to have a large amount of layers without losing its ability to predict.
+The ResNet 152v2 is an image classification model built by Microsoft that is renowned for its use of 
+<a href="https://towardsdatascience.com/what-is-residual-connection-efb07cab0d55">residual connections</a>, a technique that allows networks to have a large amount of layers without losing its ability to predict.
 
 ImageNet is an industry standard dataset often used to benchmark classification model performance. Models trained to perform on ImageNet have developed a feature space that is adept at predicting many different classes of things that may be in the image. It is a great 'starting place' for models trained on niche tasks, like this one.
 </details> 
