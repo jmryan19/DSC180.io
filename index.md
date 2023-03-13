@@ -36,7 +36,7 @@ If a model trained solely to infer the presence of pulmonary edema from chest XR
 <details>
 	<summary>UCSD Data Statistics</summary>
 
-	The threshold of 400 pg/mL was recommended by AiDA labs. The STATS. The dataset is then split into train and validation sets with splits equal to 80% and 20%, respectively.
+	The threshold of 400 pg/mL was recommended by AiDA labs. This data had 64.6% positive labels across the set. The dataset is then split into train and validation sets with splits equal to 80% and 20%, respectively.
 </details>
 
 #### MIMIC Data
@@ -45,7 +45,7 @@ If a model trained solely to infer the presence of pulmonary edema from chest XR
 <details>
 	<summary>MIMIC Data Statistics</summary>
 
-	The STATS. The dataset is then split into train, validation, and test sets with splits equal to 80%, 10%, and 10%, respectively.
+	MIMIC data had 48.7% positive labels across the set. The dataset is then split into train, validation, and test sets with splits equal to 80%, 10%, and 10%, respectively.
 </details>
 
 ### Anatomical Segmentation
@@ -125,9 +125,18 @@ As for anatomical segmentation, the results are mixed. The best overall model wa
 	<summary>Potential Problems with this Experiment</summary>
 	<br>
 
-
+There are a few reasons why MIMIC trained models outperformed UCSD models. First, biomarkers are a good correlative feature for pulmonary edema identification, but with enough error to affect model performance significantly. In this case, radioligist confirmed ground truths are to be preferred. Second, models trained on biomarkers need additional hyper-parameter-optimization to perform at the level of models trained on radiologist confirmed ground truths. This experiment trained all models using the same techniques for fairness; however, this could have the exact opposite effect by not giving enough accommodation to a model that is performing a harder task.
 </details>
 
+The best performing model, the MIMIC Segmentation model, was further analyzed using saliency techniques.
+
+### Saliency
+
+[Saliency techniques](https://www.geeksforgeeks.org/what-is-saliency-map/) are a way of visually interpreting what the models are looking to for their predictions. Deep learning models inherently translate human problems (identification of pulmonary edema) into a new dimensional space only computers can understand. Saliency techniques help translate the computer understand back for human analysis. These techniques can serve as gut checks that the model is looking at appropriate regions, help analyze where model predictions go wrong, and see what artifacts from the image the model picked up on that humans could not.
+
+This project utilized the [XRAI](https://openaccess.thecvf.com/content_ICCV_2019/papers/Kapishnikov_XRAI_Better_Attributions_Through_Regions_ICCV_2019_paper.pdf) (not XRay) technique.
 ![Alt](images/XRAI.png)
+
+Here we can see what the model looks to when it gets a positive prediction right, a negative prediction right, a positive prediction wrong, and a negative prediction wrong. For positive predictions, the model seems to focus on a lung as a whole along with the majority of the heart. Negative predictions tend to look at the overlap of heart and left lung rather than the whole lung.
 
 
