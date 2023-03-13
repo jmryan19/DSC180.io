@@ -18,7 +18,7 @@ reexplain this section starting so just by looking at
 
 ### Why Does It Matter If This Model Works?
 
-If a model trained solely to infer the presence of pulmonary edema from chest XRays by utilizing a threshold of BNPP value and could generalize to perform well on radiologist confirmed pulmonary edema XRays, there would be less of a need to have radiologist confirmed XRays in the first place. This utilization of biomarkers for the training process here (if successful) could set the stage for other medical imaging models to do the same. Moving towards biomarkers for ground truth levels would decrease the cost and time of acquiring large enough datasets for future experiments.
+If a model trained solely to infer the presence of pulmonary edema from chest XRays by utilizing a threshold of BNPP value and could generalize to perform well on radiologist confirmed pulmonary edema XRays, there would be less of a need to have radiologist labeled XRays in the first place. This utilization of biomarkers for the training process here (if successful) could set the stage for other medical imaging models to do the same. Moving towards biomarkers for ground truth levels would decrease the cost and time of acquiring large enough datasets for future experiments.
 
 ## The Experiments
 
@@ -68,7 +68,7 @@ There are four models: a model trained with full images and biomarker-based labe
 
 Each model is based on a ResNet 152v2 with pretrained weights from the ImageNet dataset. 
 ![Alt](https://i.stack.imgur.com/c2erq.png)
-*An example of ResNet model architecture*
+*   example of ResNet model architecture*
 <details>
 <summary>What is ResNet 152v2 and what is ImageNet?</summary>
 <br>
