@@ -77,8 +77,11 @@ There are four models:
 4. MIMIC Segmented: a model trained with anatomically segmented images and radiologist confirmed labels
 
 Each model is based on a ResNet 152v2 with pretrained weights from the ImageNet dataset. 
-![Alt](https://i.stack.imgur.com/c2erq.png)
-*   example of ResNet model architecture*
+<figure>
+<img src = "https://i.stack.imgur.com/c2erq.png">
+<figcaption>An Example Version of ResNet Model Architecture</figcaption>
+</figure>
+
 <details>
 <summary>What is ResNet 152v2 and what is ImageNet?</summary>
 <br>
