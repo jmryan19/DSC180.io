@@ -101,4 +101,6 @@ Mix of word explanation of results with tables, graphs, images, code, and salien
 
 ![Alt](images/all_prc.png)
 
+![Alt](images/XRAI.png)
+
 
