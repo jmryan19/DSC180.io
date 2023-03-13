@@ -89,7 +89,7 @@ Each model is based on a ResNet 152v2 with pretrained weights from the ImageNet 
 The ResNet 152v2 is an image classification model built by Microsoft that is renowned for its use of 
 <a href="https://towardsdatascience.com/what-is-residual-connection-efb07cab0d55">residual connections</a>, a technique that allows networks to have a large amount of layers without losing its ability to predict.
 
-ImageNet is an industry standard dataset often used to benchmark classification model performance. Models trained to perform on ImageNet have developed a feature space that is adept at predicting many different classes of things that may be in the image. It is a great 'starting place' for models trained on niche tasks, like this one.
+[ImageNet](https://www.image-net.org/about.php) is an industry standard dataset often used to benchmark classification model performance. Models trained to perform on ImageNet have developed a feature space that is adept at predicting many different classes of things that may be in the image. It is a great 'starting place' for models trained on niche tasks, like this one.
 </details> 
 
 <details>
@@ -111,9 +111,22 @@ There were three statistics used to represent the efficacy of the models: Area U
 | **PRC** | 0.590 | 0.799 | 0.559 | 0.816 |
 | **Accuracy** | 0.652 | 0.793 | 0.616 | 0.802 |
 
+With or without anatomical segmentation, MIMIC trained models outperformed UCSD trained models. Biomarkers, in this experiment, are not a sufficient replacement for radiologist labels for models to identify the presence of pulmonary edema. The figures below showcase this point.
+
 ![Alt](images/all_roc.png)
 
 ![Alt](images/all_prc.png)
+
+MIMIC trained models had atleast a 0.1 higher AUROC and PRC than UCSD trained models. Therefore, this experiment does not lead to the results that radiologist labels can potentially be phased out in favor of cheaper and fast biomarker levels.
+
+As for anatomical segmentation, the results are mixed. The best overall model was the MIMIC Segmentation model, that is the model that was trained on anatomical segmentation images from the radiologist labeled dataset. This could lead to the conclusion that anatomical segmentation improves model efficacy. However, the UCSD Segmentation model underperformed its non-anatomical-segmentation counterpart. The results are gray and require further testing before anything is ruled out.
+
+<details>
+	<summary>Potential Problems with this Experiment</summary>
+	<br>
+
+
+</details>
 
 ![Alt](images/XRAI.png)
 
