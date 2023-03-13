@@ -92,11 +92,18 @@ The ResNet 152v2 is an image classification model built by Microsoft that is ren
 ImageNet is an industry standard dataset often used to benchmark classification model performance. Models trained to perform on ImageNet have developed a feature space that is adept at predicting many different classes of things that may be in the image. It is a great 'starting place' for models trained on niche tasks, like this one.
 </details> 
 
+<details>
+	<summary>The Training Process</summary>
+	<br>
+
+All models were trained for at max 35 epochs using a static learning rate of 1e<superscript>-5</superscript> and batch size of 32. An early stopping feature was utilized to prevent overfitting, which analyzed change in validation AUROC. All layers were unfrozen for the training process. The loss function was weighted cross-balanced entropy loss. 
+</details>
 
 
-## Biomarkers Work (or Biomarkers Do Not Work (Yet))
 
-Mix of word explanation of results with tables, graphs, images, code, and saliency
+## Biomarkers Did Not Work As Well, But Segmentation Might Help
+
+There were three statistics used to represent the efficacy of the models: Area Under the Receiver Operator Curve (AUROC), Precision Recall Score (PRC), and Accuracy. All of these scores are a proportion, with 'perfect' performance being a 1.0 and the worst performance being a 0. [AUROC](https://developers.google.com/machine-learning/crash-course/classification/roc-and-auc) represents the tradeoff between more correct postive predictions (true positives) and accidentally allowing more incorrect positive predictions (false positives). [PRC](https://scikit-learn.org/stable/auto_examples/model_selection/plot_precision_recall.html) represents the tradeoff between the proportion of true positives out of all positive guesses and the proportion of true positives out of all real positive labels. Accuracy, of course, is the proportion of labels that are correct. 
 
 |  | UCSD-Trained Full | MIMIC-Trained Full | UCSD-Trained Segmented| MIMIC-Trained Segmented |
 | :---        |    :---:     | :---:  | :--: |  :--: | :--: |
