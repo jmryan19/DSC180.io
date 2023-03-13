@@ -67,6 +67,8 @@ Using a segmentated image can help focus a classification model on the important
 There are four models: a model trained with full images and biomarker-based labels (UCSD Full), a model trained with full images and radiologist confirmed labels (MIMIC Full), a model trained with anatomically segmented images and biomarker-based labels (UCSD Segmented), and a model trained with anatomically segmented images and radiologist confirmed labels (MIMIC Segmented).
 
 Each model is based on a ResNet 152v2 with pretrained weights from the ImageNet dataset. 
+![Alt](https://i.stack.imgur.com/c2erq.png)
+*An example of ResNet model architecture*
 <details>
 <summary>What is ResNet 152v2 and what is ImageNet?</summary>
 <br>
