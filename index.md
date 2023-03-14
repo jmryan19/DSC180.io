@@ -1,4 +1,4 @@
-# How Well Do Bio-Markers Work for CNN Training: A Comparison of Model Results
+<h1 class="page-heading">How Well Do Bio-Markers Work for CNN Training: A Comparison of Model Results</h1>
 
 ## By Jacob Ryan
 
