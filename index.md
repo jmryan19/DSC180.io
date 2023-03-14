@@ -1,4 +1,6 @@
-### Jake Ryan
+# How Well Do Bio-Markers Work for CNN Training: A Comparison of Model Results
+
+## By Jacob Ryan
 
 ## What is this?
 
