@@ -6,6 +6,9 @@
 
 ## By Jacob Ryan
 
+<a href="https://github.com/jmryan19/DSC180" class="btn">View Project GitHub</a>
+        <a href="https://github.com/jmryan19/DSC180/blob/main/Final%20Report.pdf" class="btn">View Report</a>
+
 ## What is this?
 
 This website aims to explain the project of its namesake. It involves deep learning (a form of machine learning commonly referred to as Artificial Intelligence) for the purpose of predicting whether chest radiographs (X-Rays) contain [pulmonary edema](https://www.mayoclinic.org/diseases-conditions/pulmonary-edema/symptoms-causes/syc-20377009). This site expects readers to have a basic familiriaty of what deep learning is and will explain the work with this idea in mind. However, any confusing terminology of this site can quickly be explained by a quick google search.
