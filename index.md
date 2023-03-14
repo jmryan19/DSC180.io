@@ -7,6 +7,7 @@
 ## By Jacob Ryan
 
 <a href="https://github.com/jmryan19/DSC180" class="btn">View Project GitHub</a>
+<br>
         <a href="https://github.com/jmryan19/DSC180/blob/main/Final%20Report.pdf" class="btn">View Report</a>
 
 ## What is this?
